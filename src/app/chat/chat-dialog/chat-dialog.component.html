@@ -1,0 +1,41 @@
+<div id="frame">
+  <div class="content">
+
+    <div class="contact-profile">
+      <img src="assets/logoStelliant.jpg" alt=""/>
+      <p>Stelliant</p>
+    </div>
+
+    <div #messagesContent class="messages">
+      <ul *ngFor="let message of messages">
+        <li *ngIf="message.link == false"  [ngClass]="message.origin">
+          <p> {{message.messageText}}</p>
+        </li>
+        <li *ngIf="message.link == true"  class="messages-link">
+          <button disabled> <a target="_blank" [href]="message.linkUrl"> {{message.linkTitle}} </a> </button>
+        </li>
+      </ul>
+      <div class="messages-chips">
+        <div *ngFor="let chip of chipMessages" class="chips">
+          <button class="submit" (click)="sendChipMsg(chip)">{{chip}}</button>
+        </div>
+      </div>
+      <div *ngIf="messageLoading" class="messages-typing">
+        <button disabled><span>.</span><span>.</span><span>.</span></button>
+      </div>
+    </div>
+
+    <div class="message-input">
+      <div class="wrap">
+        <input [(ngModel)]="userInput" (keyup.enter)="sendUserInput()" type="text"
+               placeholder="Écrivez votre message..."/>
+        <button class="submit" (click)="sendUserInput()"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
