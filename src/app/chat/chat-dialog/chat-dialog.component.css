@@ -19,7 +19,7 @@
   height: 60px;
   line-height: 60px;
   color: white;
-  background: linear-gradient(45deg, #c90062 0%, #f9461c 50%, #fdc82f 100%);
+  background: linear-gradient(45deg, #0d5a5f 0%, #25b4be 100%);
 }
 
 #frame .content .contact-profile img {
@@ -69,8 +69,8 @@
 }
 
 #frame .content .messages .messages-typing button {
-  background: #c900620d;
-  border: 1px solid #c90062;
+  background: #0e6f730d;
+  border: 1px solid #0e6f73;
   border-radius: 20px;
   font-size: 20px;
   padding: 0 10px 10px 10px;
@@ -112,8 +112,8 @@
 }
 
 #frame .content .messages ul li.sent p {
-  background: #c900620d;
-  border: 1px solid #c90062;
+  background: #edfbfc;
+  border: 1px solid #0e6f73;
 }
 
 #frame .content .messages ul li.replies {
@@ -127,7 +127,7 @@
 
 #frame .content .messages ul li.replies p {
   color: white;
-  background: #fdc82f;
+  background: #e97214;
   float: right;
 }
 
@@ -150,8 +150,8 @@
 }
 
 #frame .content .messages .messages-link button {
-  background: #c900620d;
-  border: 1px solid #c90062;
+  background: #edfbfc;
+  border: 1px solid #0e6f73;
   border-radius: 20px;
   font-size: inherit;
   font-family: inherit;
@@ -169,7 +169,7 @@
 }
 
 #frame .content .messages .messages-chips .chips button {
-  background-color: #c90062;
+  background-color: #0e6f73;
   color: white;
   border: none;
   border-radius: 20px;
@@ -179,7 +179,7 @@
 }
 
 #frame .content .messages .messages-chips .chips button:hover {
-  background: #d10d55;
+  background: #0e6f73;
   cursor: pointer;
 }
 
@@ -220,7 +220,7 @@
   z-index: 4;
   margin-top: 10px;
   font-size: 1.1em;
-  color: #435f7a;
+  color: #0e6f73;
   opacity: .5;
   cursor: pointer;
 }
@@ -243,12 +243,12 @@
   height: 50px;
   padding: 13px 0;
   cursor: pointer;
-  background: #c90062;
+  background: #0e6f73;
   color: white;
 }
 
 #frame .content .message-input .wrap button:hover {
-  background: #d10d55;
+  background: #0e6f73;
 }
 
 #frame .content .message-input .wrap button:focus {

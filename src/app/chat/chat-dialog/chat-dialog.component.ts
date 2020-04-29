@@ -37,7 +37,8 @@ export class ChatDialogComponent implements AfterViewChecked {
                 this.messages.push(new Message(response, Origin.SENT, true, chatResponse.linkTitle, chatResponse.linkUrl));
               }
             } else {
-              this.messages.push(new Message('Oups! Une erreur est survenue! Veuillez réessayer.', Origin.SENT, false));
+              this.messages.push(new Message('En estos momentos no puedo atenderle.', Origin.SENT, false));
+              this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987414444.', Origin.SENT, false));
             }
           });
           this.chipMessages = chatResponse.quickReplies;
@@ -46,7 +47,9 @@ export class ChatDialogComponent implements AfterViewChecked {
           console.log('Une erreur est survenue lors de la récupération de la réponse de Maria: ');
           console.log(error);
           this.messageLoading = false;
-          this.messages.push(new Message('Oups! Une erreur est survenue! Veuillez réessayer.', Origin.SENT, false));
+          this.messages.push(new Message('En estos momentos no puedo atenderle.', Origin.SENT, false));
+          this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987414444.', Origin.SENT, false));
+          this.messages.push(new Message('CATCH ERROR', Origin.SENT, false));
         });
       this.userInput = '';
       this.chipMessages = [];
