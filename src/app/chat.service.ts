@@ -14,7 +14,7 @@ export class ChatService {
   public async callChatbotWithUserInput(queryText: string): Promise<DialogflowSimpleResponse> {
 
     return new Promise(((resolve, reject) => {
-      this.http.post<DialogflowResponse>('https://xog6iqpgu3.execute-api.us-east-2.amazonaws.com/PROD/dialogflow-client', {
+      this.http.post<DialogflowResponse>('https://2j0s71hbj8.execute-api.us-east-2.amazonaws.com/dev/client', {
         queryText,
         sessionId: this.sessionId
       }).subscribe(dialogFlowResponse => {
