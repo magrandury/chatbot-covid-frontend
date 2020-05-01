@@ -28,6 +28,7 @@ export class ChatDialogComponent implements AfterViewChecked {
       this.messageLoading = true;
       this.chatService.callChatbotWithUserInput(this.userInput)
         .then(chatResponse => {
+          console.log('¡Max ha respondido!');
           this.messageLoading = false;
           chatResponse.responses.forEach(response => {
             if (response) {
@@ -38,17 +39,17 @@ export class ChatDialogComponent implements AfterViewChecked {
               }
             } else {
               this.messages.push(new Message('En estos momentos no puedo atenderle.', Origin.SENT, false));
-              this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987414444.', Origin.SENT, false));
+              this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987 414 444.', Origin.SENT, false));
             }
           });
           this.chipMessages = chatResponse.quickReplies;
         })
         .catch(error => {
-          console.log('Une erreur est survenue lors de la récupération de la réponse de Maria: ');
+          console.log('Error a la hora de recuperar la respuesta de Max:');
           console.log(error);
           this.messageLoading = false;
           this.messages.push(new Message('En estos momentos no puedo atenderle.', Origin.SENT, false));
-          this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987414444.', Origin.SENT, false));
+          this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987 414 444.', Origin.SENT, false));
           this.messages.push(new Message('CATCH ERROR', Origin.SENT, false));
         });
       this.userInput = '';
