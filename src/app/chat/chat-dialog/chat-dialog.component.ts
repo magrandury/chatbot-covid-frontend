@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewChecked, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {ChatService} from '../../chat.service';
 import {Message} from '../message';
 import {Origin} from '../origin';
@@ -8,7 +8,7 @@ import {Origin} from '../origin';
   templateUrl: './chat-dialog.component.html',
   styleUrls: ['./chat-dialog.component.css']
 })
-export class ChatDialogComponent implements AfterViewChecked {
+export class ChatDialogComponent implements OnInit, AfterViewChecked {
 
   constructor(private chatService: ChatService) {
   }
@@ -21,6 +21,12 @@ export class ChatDialogComponent implements AfterViewChecked {
   hide = false;
 
   @ViewChild('messagesContent', {read: ElementRef, static: false}) public messagesContent: ElementRef<any>;
+
+  ngOnInit(): void {
+    this.messages.push(new Message('¡Hola! Soy Max, el asistente virtual de REDYTEL.', Origin.SENT, false));
+    this.messages.push(new Message('Por cuestiones de estadística, ¿es usted cliente nuestro?', Origin.SENT, false));
+    this.chipMessages = ['Sí', 'No'];
+  }
 
   sendUserInput() {
     if (this.userInput) {
