@@ -50,7 +50,6 @@ export class ChatDialogComponent implements AfterViewChecked {
           this.messageLoading = false;
           this.messages.push(new Message('En estos momentos no puedo atenderle.', Origin.SENT, false));
           this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987 414 444.', Origin.SENT, false));
-          this.messages.push(new Message('CATCH ERROR', Origin.SENT, false));
         });
       this.userInput = '';
       this.chipMessages = [];
@@ -64,7 +63,11 @@ export class ChatDialogComponent implements AfterViewChecked {
   }
 
   public scrollBottom(): void {
-    this.messagesContent.nativeElement.scrollTop = this.messagesContent.nativeElement.scrollHeight;
+    if (this.messagesContent.nativeElement.scrollHeight - this.messagesContent.nativeElement.scrollTop < 390) {
+      this.messagesContent.nativeElement.scrollTop = this.messagesContent.nativeElement.scrollHeight;
+    } else {
+      this.messagesContent.nativeElement.scrollTop = this.messagesContent.nativeElement.scrollTop + 250;
+    }
   }
 
   ngAfterViewChecked(): void {
