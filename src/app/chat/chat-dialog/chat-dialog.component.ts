@@ -69,10 +69,10 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
   }
 
   public scrollBottom(): void {
-    if (this.messagesContent.nativeElement.scrollHeight - this.messagesContent.nativeElement.scrollTop < 390) {
+    if (this.messagesContent.nativeElement.scrollHeight - this.messagesContent.nativeElement.scrollTop < window.innerHeight - 110) {
       this.messagesContent.nativeElement.scrollTop = this.messagesContent.nativeElement.scrollHeight;
     } else {
-      this.messagesContent.nativeElement.scrollTop = this.messagesContent.nativeElement.scrollTop + 250;
+      this.messagesContent.nativeElement.scrollTop += window.innerHeight - 255;
     }
   }
 
