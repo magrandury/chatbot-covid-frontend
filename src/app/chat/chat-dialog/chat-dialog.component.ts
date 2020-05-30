@@ -23,9 +23,8 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
   @ViewChild('messagesContent', {read: ElementRef, static: false}) public messagesContent: ElementRef<any>;
 
   ngOnInit(): void {
-    this.messages.push(new Message('¡Hola! Soy Max, el asistente virtual de REDYTEL.', Origin.SENT, false));
-    this.messages.push(new Message('Por cuestiones de estadística, ¿es usted cliente nuestro?', Origin.SENT, false));
-    this.chipMessages = ['Sí', 'No'];
+    // tslint:disable-next-line:max-line-length
+    this.messages.push(new Message('¡Hola! Soy Aurora y estaré encantada de ayudarle a resolver todas sus dudas sobre el COVID-19.', Origin.SENT, false));
   }
 
   sendUserInput() {
@@ -34,7 +33,7 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
       this.messageLoading = true;
       this.chatService.callChatbotWithUserInput(this.userInput)
         .then(chatResponse => {
-          console.log('¡Max ha respondido!');
+          console.log('¡Aurora ha respondido!');
           this.messageLoading = false;
           chatResponse.responses.forEach(response => {
             if (response) {
@@ -45,17 +44,23 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
               }
             } else {
               this.messages.push(new Message('En estos momentos no puedo atenderle.', Origin.SENT, false));
-              this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987 414 444.', Origin.SENT, false));
+              // tslint:disable-next-line:max-line-length
+              this.messages.push(new Message('No dude en buscar la respuesta a sus preguntas en la página dedicada al COVID-19 del Ministerio de Sanidad.', Origin.SENT, false));
+              // tslint:disable-next-line:max-line-length
+              this.messages.push(new Message('https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm', Origin.SENT, true));
             }
           });
           this.chipMessages = chatResponse.quickReplies;
         })
         .catch(error => {
-          console.log('Error a la hora de recuperar la respuesta de Max:');
+          console.log('Error a la hora de recuperar la respuesta de Aurora:');
           console.log(error);
           this.messageLoading = false;
           this.messages.push(new Message('En estos momentos no puedo atenderle.', Origin.SENT, false));
-          this.messages.push(new Message('No dude en contactar con mis compañeros llamando al 987 414 444.', Origin.SENT, false));
+          // tslint:disable-next-line:max-line-length
+          this.messages.push(new Message('No dude en buscar la respuesta a sus preguntas en la página dedicada al COVID-19 del Ministerio de Sanidad.', Origin.SENT, false));
+          // tslint:disable-next-line:max-line-length
+          this.messages.push(new Message('https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm', Origin.SENT, true));
         });
       this.userInput = '';
       this.chipMessages = [];
