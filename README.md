@@ -1,4 +1,4 @@
-# ChatbotFront
+# Chatbot Frontend
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
 
@@ -25,5 +25,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## New project
+If you clone this repository, you have to update the following:
+
+- Title and favicon in **index.html**
+
+- Favicon in **assets/**
+
+- Url of dialogflow-client AWS Lambda in **chat.service.ts**
+
+- OnInit and error messages in **chat-dialog.component.ts**
+
+- Name and favicon in **chat-dialog.component.html**
+
+- Style in **chat-dialog.component.css**
 
 ## Merci
