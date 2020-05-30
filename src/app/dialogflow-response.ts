@@ -20,8 +20,6 @@ export interface DialogflowResponse {
         imageUri: string
       }
     }>;
-
   fulfillmentText: string;
-
   sessionId: string;
 }
