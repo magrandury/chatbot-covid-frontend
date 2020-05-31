@@ -18,7 +18,7 @@
       <div class="messages-chips">
         <div *ngFor="let chip of chipMessages" class="chips">
           <button class="submit" (click)="sendChipMsg(chip)">{{chip}}</button>
-          <span class="chipstext">Tooltip text</span>
+          <span class="chipstext">{{chipTooltips[chipMessages.indexOf(chip)]}}</span>
         </div>
       </div>
       <div *ngIf="messageLoading" class="messages-typing">

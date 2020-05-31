@@ -16,6 +16,7 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
   userInput: string;
   messages: Message[] = [];
   chipMessages: string[] = [];
+  chipTooltips: string[] = [];
   messageLoading = false;
   lastMessagesCount = 0;
   hide = false;
@@ -53,6 +54,7 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
             }
           });
           this.chipMessages = chatResponse.quickReplies;
+          this.chipTooltips = chatResponse.quickRepliesText;
         })
         .catch(error => {
           console.log('Error a la hora de recuperar la respuesta de Aurora:');
@@ -66,12 +68,14 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
         });
       this.userInput = '';
       this.chipMessages = [];
+      this.chipTooltips = [];
     }
   }
 
   sendChipMsg(chip: string) {
     this.userInput = chip;
     this.chipMessages = [];
+    this.chipTooltips = [];
     this.sendUserInput();
   }
 
