@@ -5,6 +5,7 @@ export class DialogflowSimpleResponse {
   public linkTitle: string;
   public linkUrl: string;
   public quickReplies: string[];
+  public quickRepliesText: string[];
   public errorResponse: string;
 
   constructor() {
@@ -12,6 +13,7 @@ export class DialogflowSimpleResponse {
     this.linkTitle = '';
     this.linkUrl = '';
     this.quickReplies = [];
+    this.quickRepliesText = [];
     this.errorResponse = '';
   }
 
@@ -25,8 +27,15 @@ export class DialogflowSimpleResponse {
         console.log(this.responses);
       } else if (fulfillmentMessage.message === 'quickReplies') {
         console.log('----- quickReplies -----');
-        this.quickReplies = fulfillmentMessage.quickReplies.quickReplies;
+        fulfillmentMessage.quickReplies.quickReplies.forEach(quickReply => {
+          if (fulfillmentMessage.quickReplies.quickReplies.indexOf(quickReply) % 2 === 0) {
+            this.quickReplies.push(quickReply);
+          } else {
+            this.quickRepliesText.push(quickReply);
+          }
+        });
         console.log(this.quickReplies);
+        console.log(this.quickRepliesText);
       } else if (fulfillmentMessage.message === 'card') {
         console.log('----- card -----');
         this.responses.push('link');
