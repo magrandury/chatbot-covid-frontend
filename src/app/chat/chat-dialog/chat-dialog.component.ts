@@ -25,7 +25,7 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
 
   ngOnInit(): void {
     // tslint:disable-next-line:max-line-length
-    this.messages.push(new Message('¡Hola! Soy Aurora y estaré encantada de ayudarle a resolver todas sus dudas sobre el COVID-19.', Origin.SENT, false));
+    this.messages.push(new Message('¡Hola! Soy Aurora y estaré encantada de ayudarle a resolver todas sus dudas sobre la COVID-19.', Origin.SENT, false));
     // tslint:disable-next-line:max-line-length
     this.messages.push(new Message('De cara a temas estadísticos y ofrecerle mejor información, ¿cuál es su provincia?', Origin.SENT, false));
   }
@@ -48,9 +48,9 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
             } else {
               this.messages.push(new Message('En estos momentos no puedo atenderle.', Origin.SENT, false));
               // tslint:disable-next-line:max-line-length
-              this.messages.push(new Message('No dude en buscar la respuesta a sus preguntas en la página dedicada al COVID-19 del Ministerio de Sanidad.', Origin.SENT, false));
+              this.messages.push(new Message('No dude en buscar la respuesta a sus preguntas en la página dedicada al COVID-19 del Ministerio de Sanidad:', Origin.SENT, false));
               // tslint:disable-next-line:max-line-length
-              this.messages.push(new Message('https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm', Origin.SENT, true));
+              this.messages.push(new Message('link', Origin.SENT, true, 'Ministerio de Sanidad', 'https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm'));
             }
           });
           this.chipMessages = chatResponse.quickReplies;
@@ -64,7 +64,7 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
           // tslint:disable-next-line:max-line-length
           this.messages.push(new Message('No dude en buscar la respuesta a sus preguntas en la página dedicada al COVID-19 del Ministerio de Sanidad.', Origin.SENT, false));
           // tslint:disable-next-line:max-line-length
-          this.messages.push(new Message('https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.htm', Origin.SENT, true));
+          this.messages.push(new Message('https://www.mscbs.gob.es/profesionales/saludPublica/ccayes/alertasActual/nCov-China/home.html', Origin.SENT, true));
         });
       this.userInput = '';
       this.chipMessages = [];
