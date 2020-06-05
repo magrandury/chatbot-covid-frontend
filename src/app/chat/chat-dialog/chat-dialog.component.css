@@ -19,7 +19,28 @@
   height: 60px;
   line-height: 60px;
   color: white;
-  background: #0e6f73;
+  background: linear-gradient(45deg, #9900cc 0%, #00cccc 50%, #00cc99 100%);
+
+  /*
+  Morado: 9900cc
+  Verde azulado: 00cc99
+  Azul verdoso: 00cccc
+
+  --- TOP ---
+  Women con morado paleta:            linear-gradient(45deg, #9900cc 0%, #d64e00 50%, #ffa800 100%);
+  Morado paleta verde azulado paleta: linear-gradient(45deg, #9900cc, #00cc99 100%);
+  Morado azul verde paleta:           linear-gradient(45deg, #9900cc 0%, #00cccc 50%, #00cc99 100%);
+
+  --- POSIBLES ---
+  Women:                              linear-gradient(45deg, #9817e3 0%, #d64e00 50%, #ffa800 100%);
+  Women con morado paleta:            linear-gradient(45deg, #9900cc 0%, #d64e00 50%, #ffa800 100%);
+  Stelliant:                          linear-gradient(45deg, #c90062 0%, #f9461c 50%, #fdc82f 100%);
+  Stelliant con morado paleta:        linear-gradient(45deg, #9900cc 0%, #f9461c 50%, #fdc82f 100%);
+  Morado azul:                        linear-gradient(45deg, #a100ff 0%, #1178ff 50%, #09e0ff 100%);
+  Morado women verde azulado paleta:  linear-gradient(45deg, #9817e3 0%, #00cc99 100%);
+  Morado paleta verde azulado paleta: linear-gradient(45deg, #9900cc, #00cc99 100%);
+  Morado azul verde paleta:           linear-gradient(45deg, #9900cc 0%, #00cccc 50%, #00cc99 100%);
+   */
 }
 
 #frame .content .contact-profile img {
@@ -48,7 +69,7 @@
 }
 
 #frame .content .messages::-webkit-scrollbar-thumb {
-  background-color: #e9721447;
+  background-color: #f3ccff;
   visibility: hidden;
 }
 
@@ -70,7 +91,7 @@
 
 #frame .content .messages .messages-typing button {
   background: #0e6f730d;
-  border: 1px solid #0e6f73;
+  border: 1px solid #9900cc;
   border-radius: 20px;
   font-size: 20px;
   padding: 0 10px 10px 10px;
@@ -112,8 +133,8 @@
 }
 
 #frame .content .messages ul li.sent p {
-  background: #edfbfc;
-  border: 1px solid #0e6f73;
+  background: #f9e6ff; /* Morado paleta: más oscuro: f3ccff, casi blanco: f9e6ff */
+  border: 1px solid #9900cc;
 }
 
 #frame .content .messages ul li.replies {
@@ -127,7 +148,11 @@
 
 #frame .content .messages ul li.replies p {
   color: white;
-  background: #e97214;
+  /* Coincide con el último color del degradado del perfil
+  naranja: ffa800
+  verde azulado: 00cc99
+  */
+  background: #00cc99;
   float: right;
 }
 
@@ -141,7 +166,7 @@
   display: inline-block;
   padding: 10px 15px;
   border-radius: 20px;
-  max-width: 205px;
+  max-width: 250px;
   line-height: 130%;
 }
 
@@ -150,8 +175,8 @@
 }
 
 #frame .content .messages .messages-link button {
-  background: #edfbfc;
-  border: 1px solid #0e6f73;
+  background: #f3ccff; /* Morado paleta: más oscuro: f3ccff, casi blanco: f9e6ff */
+  border: 1px solid #9900cc;
   border-radius: 20px;
   font-size: inherit;
   font-family: inherit;
@@ -170,23 +195,23 @@
 }
 
 #frame .content .messages .messages-chips .chips button {
-  background-color: #0e6f73;
+  background-color: #9900cc;
   color: white;
   border: none;
   border-radius: 20px;
-  font-size: inherit;
+  font-size: 16px;
   font-family: inherit;
   padding: 10px 15px;
 }
 
 #frame .content .messages .messages-chips .chips button:hover {
-  background: #0e6f73;
+  background: #9900cc;
   cursor: pointer;
 }
 
 #frame .content .messages .messages-chips .chips .chipstext {
   visibility: hidden;
-  background-color: lightseagreen;
+  background-color: #d966ff;
   color: #fff;
   text-align: center;
   padding: 5px 10px;
@@ -212,7 +237,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #21d0c3 transparent transparent transparent;
+  border-color: #d966ff transparent transparent transparent;
 }
 
 #frame .content .messages .messages-chips .chips:hover .chipstext {
@@ -258,7 +283,7 @@
   z-index: 4;
   margin-top: 10px;
   font-size: 1.1em;
-  color: #0e6f73;
+  color: #9900cc;
   opacity: .5;
   cursor: pointer;
 }
@@ -281,12 +306,12 @@
   height: 50px;
   padding: 13px 0;
   cursor: pointer;
-  background: #0e6f73;
+  background: #9900cc;
   color: white;
 }
 
 #frame .content .message-input .wrap button:hover {
-  background: #0e6f73;
+  background: #9900cc;
 }
 
 #frame .content .message-input .wrap button:focus {
