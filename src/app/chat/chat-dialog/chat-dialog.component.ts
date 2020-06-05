@@ -19,7 +19,6 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
   chipTooltips: string[] = [];
   messageLoading = false;
   lastMessagesCount = 0;
-  hide = false;
 
   @ViewChild('messagesContent', {read: ElementRef, static: false}) public messagesContent: ElementRef<any>;
 
