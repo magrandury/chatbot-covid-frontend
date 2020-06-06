@@ -26,7 +26,7 @@ export class ChatDialogComponent implements OnInit, AfterViewChecked {
     // tslint:disable-next-line:max-line-length
     this.messages.push(new Message('¡Hola! Soy Aurora y estaré encantada de ayudarle a resolver todas sus dudas sobre la COVID-19.', Origin.SENT, false));
     // tslint:disable-next-line:max-line-length
-    this.messages.push(new Message('De cara a temas estadísticos y ofrecerle mejor información, ¿cuál es su provincia?', Origin.SENT, false));
+    this.messages.push(new Message('Por temas estadísticos y para poder ofrecerle información más detallada, ¿cuál es su provincia?', Origin.SENT, false));
   }
 
   sendUserInput() {
