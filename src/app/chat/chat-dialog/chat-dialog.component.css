@@ -54,6 +54,26 @@
   float: left;
 }
 
+#frame .content .contact-profile button {
+  float: right;
+  width: 60px;
+  border-radius: 20px;
+  margin: 20px 12px 0 9px;
+  background-color: #00cc99;
+  color: white;
+  border: 1px solid white;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+#frame .content .contact-profile button:hover {
+  cursor: pointer;
+}
+
+#frame .content .contact-profile button:focus {
+  outline: none;
+}
+
 #frame .content .messages {
   height: 100%;
   width: 100%;
@@ -68,8 +88,8 @@
   background: transparent;
 }
 
-#frame .content .messages::-webkit-scrollbar-thumb {
-  background-color: #f3ccff;
+#frame .content .messages::-webkit-scrollbar-thumb { /*UPDATE*/
+  background-color: #ccffff; /* Morado: f3ccff Azul: e6f3ff Azulverde: ccffff*/
   visibility: hidden;
 }
 
@@ -89,9 +109,9 @@
   margin: 0 15px 10px 15px;
 }
 
-#frame .content .messages .messages-typing button {
+#frame .content .messages .messages-typing button { /*UPDATE*/
   background: #0e6f730d;
-  border: 1px solid #9900cc;
+  border: 1px solid #00cccc; /* Morado: 9900cc Azul: 0066cc Verde: 00cc99*/
   border-radius: 20px;
   font-size: 20px;
   padding: 0 10px 10px 10px;
@@ -132,9 +152,9 @@
   margin: 6px 8px 0 0;
 }
 
-#frame .content .messages ul li.sent p {
-  background: #f9e6ff; /* Morado paleta: más oscuro: f3ccff, casi blanco: f9e6ff */
-  border: 1px solid #9900cc;
+#frame .content .messages ul li.sent p { /*UPDATE*/
+  background: #e6ffff; /* Morado: f9e6ff Azul: e6f3ff Verde: ccfff2 Azulverde: e6ffff*/
+  border: 1px solid #00cccc; /* Morado: 9900cc Azul: 0066cc Verde: 00cc99*/
 }
 
 #frame .content .messages ul li.replies {
@@ -146,13 +166,9 @@
   margin: 6px 0 0 8px;
 }
 
-#frame .content .messages ul li.replies p {
+#frame .content .messages ul li.replies p { /* UPDATE */
   color: white;
-  /* Coincide con el último color del degradado del perfil
-  naranja: ffa800
-  verde azulado: 00cc99
-  */
-  background: #00cc99;
+  background: #00cc99; /* Verde: 00cc99 Azul: 0066cc Azulverde: 00cc99*/
   float: right;
 }
 
@@ -174,9 +190,9 @@
   margin: 5px 15px 5px 15px;
 }
 
-#frame .content .messages .messages-link button {
-  background: #f3ccff; /* Morado paleta: más oscuro: f3ccff, casi blanco: f9e6ff */
-  border: 1px solid #9900cc;
+#frame .content .messages .messages-link button { /*UPDATE*/
+  background: #e6ffff; /* Morado: f9e6ff Azul: e6f3ff Azulverde: e6ffff*/
+  border: 1px solid #00cccc; /* Morado: 9900cc Azul: 0066cc Azulverde: 00cccc*/
   border-radius: 20px;
   font-size: inherit;
   font-family: inherit;
@@ -194,8 +210,8 @@
   margin: 5px 10px 5px 0;
 }
 
-#frame .content .messages .messages-chips .chips button {
-  background-color: #9900cc;
+#frame .content .messages .messages-chips .chips button { /*UPDATE*/
+  background-color: #0066cc; /* Morado: 9900cc Azul: 0066cc Verde: 00cc99*/
   color: white;
   border: none;
   border-radius: 20px;
@@ -205,13 +221,12 @@
 }
 
 #frame .content .messages .messages-chips .chips button:hover {
-  background: #9900cc;
   cursor: pointer;
 }
 
-#frame .content .messages .messages-chips .chips .chipstext {
+#frame .content .messages .messages-chips .chips .chipstext { /*UPDATE*/
   visibility: hidden;
-  background-color: #d966ff;
+  background-color: #00cccc; /* Morado: d966ff Azul: 00cccc */
   color: #fff;
   text-align: center;
   padding: 5px 10px;
@@ -228,7 +243,7 @@
   transition: opacity 0.5s;
 }
 
-#frame .content .messages .messages-chips .chips .chipstext::after {
+#frame .content .messages .messages-chips .chips .chipstext::after { /*UPDATE*/
   /* Add arrow */
   content: " ";
   position: absolute;
@@ -237,7 +252,7 @@
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #d966ff transparent transparent transparent;
+  border-color: #00cccc transparent transparent transparent; /* Morado: d966ff Azul: 00cccc */
 }
 
 #frame .content .messages .messages-chips .chips:hover .chipstext {
@@ -277,13 +292,13 @@
   outline: none;
 }
 
-#frame .content .message-input .wrap .attachment {
+#frame .content .message-input .wrap .attachment { /*UPDATE*/
   position: absolute;
   right: 60px;
   z-index: 4;
   margin-top: 10px;
   font-size: 1.1em;
-  color: #9900cc;
+  color: #00cc99; /* Morado: 9900cc Azul: 0066cc Verde: 00cc99*/
   opacity: .5;
   cursor: pointer;
 }
@@ -299,19 +314,19 @@
   opacity: 1;
 }
 
-#frame .content .message-input .wrap button {
+#frame .content .message-input .wrap button { /*UPDATE*/
   float: right;
   border: none;
   width: 50px;
   height: 50px;
   padding: 13px 0;
   cursor: pointer;
-  background: #9900cc;
+  background: #0066cc; /* Morado: 9900cc Azul: 0066cc Verde: 00cc99 */
   color: white;
 }
 
-#frame .content .message-input .wrap button:hover {
-  background: #9900cc;
+#frame .content .message-input .wrap button:hover { /*UPDATE*/
+  background: #0066cc; /* Morado: 9900cc Azul: 0066cc Verde: 00cc99*/
 }
 
 #frame .content .message-input .wrap button:focus {
